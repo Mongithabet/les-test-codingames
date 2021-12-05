@@ -1,23 +1,39 @@
 import React, { Component } from 'react'
-import Profile from './components/Profile'
-import { UserContext } from './components/MyContext'
-import { ColorContext } from './components/MyContext'
-export default class App extends Component {
+import { InputWithFocusButton } from './components/InputWithFocusButton'
+import { Input } from './components/InputFrwFocus'
+import { FocusableInput } from './components/InputFrwFocus'
+import { Page, PreviewPage, UserInfo } from './components/Page'
+import { Message } from './components/Message'
+import ResultDisplayer, { PreviewResultDisplayer } from './components/ResultDisplayer'
+import UserContextMyComp from './components/UserContextMyComp'
+import FooReducer from './components/FooReducer'
+import WarningBanner from './components/WarningBanner'
+import MyComponent from './components/MyComponent'
+import ButtonAndInput from './components/ButtonAndInput'
+import { Preview } from './components/ButtonAndInput'
+import Test from './components/Test'
+ export class App extends Component {
+     
+    render() {
+        return (
+            <div className="test">
+                
+         {/* < InputWithFocusButton />  */}
+            {/* <FocusableInput/> */}
+            {/* <PreviewPage/>  */}
+            {/* <Message/> */}
+            {/* <PreviewResultDisplayer/> */}
+             {/* <UserContextMyComp/> */}
+             {/* <FooReducer/> */}
+            {/* <WarningBanner warn={warn}/> */}
+            {/* <MyComponent/> */}
+            <Test/>
+            </div>
 
 
-  state = {
-    user: {
-      name: 'Lisa',
-      age: 8
+
+        )
     }
-  }
-  render() {
-    return (
-      <UserContext.Provider value={this.state.user}>
-        <ColorContext.Provider value={'red'} >
-        <Profile />
-        </ColorContext.Provider>
-      </UserContext.Provider>
-    )
-  }
 }
+
+export default App
